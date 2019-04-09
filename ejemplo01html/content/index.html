@@ -1,0 +1,73 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Almacen de peliculas</title>
+            <meta charset="UTF-8"/>
+        </head>
+        <body>
+            <header>
+                <h1>Datos de las pelis</h1>
+            </header>
+            
+            <form action="miAccion">
+                <label>Título</label>
+                <input type="text" placeholder="título de la peli" required>
+                <br/>
+                <br/>
+                <label>Director</label>
+                <input type="text" placeholder="nombre director" required>
+                <br/>
+                <br/>
+                <label>Cod-ID</label>
+                <input type="text" placeholder="ABC-12539-BA" required
+                pattern="(^[A-Z]{3}[1-9]{5}[A-Z]{2}$)"/>
+                <br/>
+                <br/>
+                <label>Fecha publicación</label>
+                <input type="date"/>
+                <br/>
+                <br/>
+                <label>Género</label>
+                <select name="selectGenero">
+                    <option value="Horror">Horror</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Drama">Drama</option>
+                </select>
+                <br/>
+                <br/>
+                <label>Valoración</label>
+                <input type="range">
+                <br/>
+                <br/>
+                <input type="submit" value="enviar"/>
+            </form>
+            <br/>
+            <div>
+                    <table>
+                         <tr>
+                                <th>Cod-ID</th>
+                                <th>Título</th>
+                                <th>Director</th>
+                                <th>Género</th>
+                                <th>Fecha</th>
+                                <th>Valoración</th>
+                            </tr>
+                        <tr>
+                            <td>ASD12345AZ</td>
+                            <td>Dumbo</td>
+                            <td>Tim Burton</td>
+                            <td>Drama</td>
+                            <td>04/04/2019</td>
+                            <td>8</td>
+                        </tr>
+                        
+                                
+                        
+                                
+                        
+                        </table>
+            </div>
+            
+        </body>
+            
+    </html>
