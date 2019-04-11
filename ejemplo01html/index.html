@@ -1,0 +1,77 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <script type="text/javascript" src="js/ejemplo01pelis.js"></script>
+            <title>Almacen de peliculas</title>
+            <meta charset="UTF-8"/>
+            
+        </head>
+        <body>
+            <header>
+                <h1>Datos de las pelis</h1>
+            </header>
+            
+            <form action="insertar" id="miFormulario">
+                <label>Título</label>
+                <input type="text" id="title" placeholder="título de la peli" required>
+                <br/>
+                <br/>
+                <label>Director</label>
+                <input type="text" id="director" placeholder="nombre director" required>
+                <br/>
+                <br/>
+                <label>Cod-ID</label>
+                <input type="text" id="cod" placeholder="ABC-12539-BA" required
+                pattern="(^[A-Z]{3}-[1-9]{5}-[A-Z]{2}$)"/>
+                <br/>
+                <br/>
+                <label>Fecha publicación</label>
+                <input type="date" id="date"/>
+                <br/>
+                <br/>
+                <label>Género</label>
+                <select name="selectGenero" id="gen">
+                    <option value="Horror">Horror</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Drama">Drama</option>
+                </select>
+                <br/>
+                <br/>
+                <label>Valoración</label>
+                <input type="range" id="val">
+                <br/>
+                <br/>
+                <input type="submit" onclick="agregar()" value="Añadir"/>
+            </form>
+            <br/>
+            <div>
+                <table id="table">
+                    <thead id="head">
+                        <th>Cod-ID</th>
+                        <th>Título</th>
+                        <th>Director</th>
+                        <th>Género</th>
+                        <th>Fecha</th>
+                        <th>Valoración</th>
+                        <th>Opciones</th>
+                    </thead>
+                    <tbody id="body">
+                        <tr>
+                            <td>ASD12345AZ</td>
+                            <td>Dumbo</td>
+                            <td>Tim Burton</td>
+                            <td>Drama</td>
+                            <td>04/04/2019</td>
+                            <td>8</td>
+                            <td>
+                                <button value="Eliminar" onclick="eliminar('ASD12345AZ')"> Eliminar</button>
+                                <button value="Editar" onclick="editar('ASD12345AZ')" >Editar</button>             
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </body>
+            
+    </html>
