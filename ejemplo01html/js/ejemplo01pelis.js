@@ -1,4 +1,25 @@
 
+function inicializar(){
+    var tbody = document.getElementById("body");
+    if(localStorage.getItem("miTabla") == null){
+        var tablaBase = "<tr><td>ASD12345AZ</td>" +
+            "<td>Dumbo</td>" +
+            "<td>Tim Burton</td>" +
+            "<td>Drama</td>" +
+            "<td>04/04/2019</td>" +
+            "<td>8</td>" +
+           " <td>" +
+                '<button value="Eliminar" onclick="eliminar(\'ASD12345AZ\')"> Eliminar</button>' +
+                '<button value="Editar" onclick="editar(\'ASD12345AZ\')">Editar</button>' +   
+            "</td>" +
+        "</tr>"
+        localStorage.setItem("miTabla",tablaBase);
+        tbody.innerHTML = tablaBase;
+    }else{
+        tbody.innerHTML = localStorage.getItem("miTabla");
+    }
+}
+
 function agregar(){
     var titulo = document.getElementById("title").value
     var director = document.getElementById("director").value
@@ -40,12 +61,16 @@ function agregar(){
    // debugger
     var tablabody = document.getElementById("body")
     tablabody.appendChild(fila);
+    localStorage.setItem("miTabla",tablabody.innerHTML);
 } 
+
+
 function eliminar( idEliminar){
     
     var elementoEliminar = buscarElementoEnCuerpoDeTabla(idEliminar)
     var tablabody = document.getElementById("body")
     tablabody.removeChild(elementoEliminar)
+    localStorage.setItem("miTabla",tablabody.innerHTML);
 
 }
 
