@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var producto_1 = require("./producto");
+var cestaDeLaCompra_1 = require("./cestaDeLaCompra");
+var onePlus = new producto_1.Producto("One Plus 6T", 500, new Date(2019, 5, 20));
+onePlus.toString();
+var miCesta = new cestaDeLaCompra_1.CestaDeLaCompra();
+miCesta.addProducto(onePlus);
+console.log(miCesta);
+console.log(cestaDeLaCompra_1.CestaDeLaCompra.siguienteId);
