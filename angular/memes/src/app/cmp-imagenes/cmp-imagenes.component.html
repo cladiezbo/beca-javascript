@@ -1,0 +1,16 @@
+<div>
+    <app-cmp-texto-superior [superior]= "textoSuperior" (onChangeName)="cambiarTextoSuperior($event)"></app-cmp-texto-superior>
+    <app-cmp-texto-inferior [inferior]= "textoInferior" (onChangeName)="cambiarTextoInferior($event)"></app-cmp-texto-inferior>
+
+</div>
+
+<div>
+    <img crossorigin="Anonymous" class="preview-image" [src]="imageURL">
+    <div >
+      <label for="publicarSuperior">{{textoSuperior}}</label>
+    </div>
+    <div>
+        <label for="publicarInferior">{{textoInferior}}</label>
+    </div>      
+</div>
+
