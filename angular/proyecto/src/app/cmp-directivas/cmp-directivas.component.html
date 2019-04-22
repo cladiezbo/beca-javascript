@@ -1,0 +1,21 @@
+<h1>Directivas</h1>
+<h2>estructurales</h2>
+<button type="button" (click)="cambiarMostrar()">Mostrando:{{mostrar? 'si':'no'}}</button>
+<p *ngIf="mostrar">Se muestra si = true</p>
+<p *ngIf="mostrar; else else1">Se muestra si = true (IF 1)</p>
+<ng-template #else1>
+  <p>se muestra si mostrar = false (ELSE 1)</p>
+</ng-template>
+<div [ngSwitch]="miMascota">
+  <p *ngSwitchCase= "'gato'">tengo un gato</p>
+  <p *ngSwitchCase="'canario'">tengo un canario</p>
+  <p *ngSwitchDefault>tengo otra mascota</p>
+</div>
+<h2>Atributos</h2>
+<p [ngClass]="getClases()">un texto azul subrayado</p>
+<p [ngStyle]="{color: 'yellow', 'background-color':'black'}">un texto amarillo con fondo negro</p>
+<p appMarcar>texto marcado en rojo</p>
+<p [appMarcar]= "'green'">texto marcado en verde</p>
+<p [appMarcar]= "'blue'">texto marcado en blue</p>
+<p [appMarcar]= "'pink'">texto marcado en pink</p>
+<input type="text" appEscribirchulo>

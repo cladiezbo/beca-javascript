@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{FormsModule} from '@angular/forms';
+import{FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-componente.component';
@@ -15,6 +15,19 @@ import { CmpRefPlantillaComponent } from './mi-tercer-componente/cmp-ref-plantil
 import { CmpInputOutputComponent } from './cmp-input-output/cmp-input-output.component';
 import { CmpAComponent } from './cmp-input-output/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp-input-output/cmp-b/cmp-b.component';
+import { CmpPipesComponent } from './cmp-pipes/cmp-pipes.component';
+import { DoblePipe } from './cmp-pipes/doble.pipe';
+import { ReversePipe } from './cmp-pipes/reverse.pipe';
+import { HideWordsPipe } from './cmp-pipes/hide-words.pipe';
+import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
+import { ConvertTextPipe } from './cmp-pipes/convert-text.pipe';
+import { FiltroPipe } from './cmp-pipes/filtro.pipe';
+import { MarcarDirective } from './cmp-directivas/marcar.directive';
+import { EscribirchuloDirective } from './cmp-directivas/escribirchulo.directive';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+import { UsuarioAComponent } from './cmp-servicios/usuario-a/usuario-a.component';
+import { UsuarioBComponent } from './cmp-servicios/usuario-b/usuario-b.component';
+import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +43,25 @@ import { CmpBComponent } from './cmp-input-output/cmp-b/cmp-b.component';
     CmpRefPlantillaComponent,
     CmpInputOutputComponent,
     CmpAComponent,
-    CmpBComponent
+    CmpBComponent,
+    CmpPipesComponent,
+    DoblePipe,
+    ReversePipe,
+    HideWordsPipe,
+    CmpDirectivasComponent,
+    ConvertTextPipe,
+    FiltroPipe,
+    MarcarDirective,
+    EscribirchuloDirective,
+    CmpServiciosComponent,
+    UsuarioAComponent,
+    UsuarioBComponent,
+    CmpFormulariosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

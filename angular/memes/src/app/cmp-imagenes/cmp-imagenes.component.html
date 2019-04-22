@@ -1,16 +1,13 @@
-<div>
+<div id="contenido">
     <app-cmp-texto-superior [superior]= "textoSuperior" (onChangeName)="cambiarTextoSuperior($event)"></app-cmp-texto-superior>
     <app-cmp-texto-inferior [inferior]= "textoInferior" (onChangeName)="cambiarTextoInferior($event)"></app-cmp-texto-inferior>
 
 </div>
 
 <div>
+    <p for="publicarSuperior" id="superior" class="parrafo">{{textoSuperior}}</p>
     <img crossorigin="Anonymous" class="preview-image" [src]="imageURL">
-    <div >
-      <label for="publicarSuperior">{{textoSuperior}}</label>
-    </div>
-    <div>
-        <label for="publicarInferior">{{textoInferior}}</label>
-    </div>      
+    <p for="publicarInferior" id="inferior" class="parrafo">{{textoInferior}}</p>
+          
 </div>
 

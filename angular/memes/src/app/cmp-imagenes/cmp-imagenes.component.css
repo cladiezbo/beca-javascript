@@ -1,0 +1,18 @@
+div#contenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+p.parrafo{
+    font-size: 35px;
+    position: absolute;
+    color: white;
+    left: 70px;
+
+}
+p#suerior{
+    top:80px;
+}
+p#inferior{
+    bottom:-10px;
+}
