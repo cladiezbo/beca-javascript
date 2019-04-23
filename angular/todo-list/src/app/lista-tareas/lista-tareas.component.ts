@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Tarea } from 'src/tarea';
+import { Tarea } from '../tarea';
 import { TareasService } from '../tareas.service';
 
 @Component({
@@ -13,7 +13,13 @@ export class ListaTareasComponent implements OnInit {
   constructor(private tareasService: TareasService) { }
 
   ngOnInit() {
-    this.tareas= this.tareasService.getTareas();
+    this.inicializarTareas();
+    this.tareasService.datosCambiados.subscribe(()=>{
+      this.inicializarTareas()
+    });
+  }
+  inicializarTareas(){
+    this.tareasService.getTareas().subscribe(tareas=> this.tareas= tareas);
   }
 
 }
